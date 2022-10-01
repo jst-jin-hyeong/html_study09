@@ -14,7 +14,7 @@ function callName(nickName) {
     var prohibits = ['바보', '멍청이', '홍길동'];
     if (prohibits.includes(nickName)) {
         console.log('잘못된 닉네임은 인사를 못해준다 욘석아!');
-        return;
+        return; 
     }
     console.log(`${nickName}님 안녕하세요~~`);
 }

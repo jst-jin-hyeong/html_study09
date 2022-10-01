@@ -1,5 +1,23 @@
+//그냥 20221001 수업시간에 얘기하면서 한거
+
 function add(n1, n2){
     var result = n1 + n2;
     return result;
 }
 console.log(add(100, 3));
+
+
+//2개의 정수를 전달하면 그 곱을 출력하는 함수
+function multi(n1, n2){
+    var r= n1 * n2;
+    console.log(`${n1} x ${n2} = ${r}`);
+    return n1 * n2;
+}
+
+var checkVar = multi(101, 7);
+
+console.log(checkVar);
+
+console.log(typeof(check));
+
+multi(add(5, 3), add(9, 7));

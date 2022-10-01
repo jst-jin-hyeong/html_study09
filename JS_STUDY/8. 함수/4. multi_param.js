@@ -16,14 +16,26 @@ function addAll(numbers) {
     return total;
 }
 
+function introMyPet(pet){
+    console.log(`우리 애완동물 이름은 ${pet.name}입니다.`);
+    console.log(`우리 애완동물 나이는 ${pet.age}입니다.`);
+}
+
+introMyPet({
+    name: '해피',
+    age: 5
+});
+
 // ES6+ 문법
-function addAll2(...numbers) {
+function addAll2(...numbersss) {
+    console.log(typeof(numbersss));
     var total = 0;
-    for (var n of numbers) {
+    for (var n of numbersss) {
         total += n;
     }
     return total;
 }
+addAll2(1, 3, 4, 65, 7);
 
 var result1 = add2(10, 20);
 var result2 = add3(10, 20, 30);
