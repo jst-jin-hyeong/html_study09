@@ -1,0 +1,12 @@
+
+/* common */
+
+.clearfix::after{
+    content:'';
+    display: block;
+    clear: both;
+}
+
+body, .wrap{
+    font-size: 14px;
+}
