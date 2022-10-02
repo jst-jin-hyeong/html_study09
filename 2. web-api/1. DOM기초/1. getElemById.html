@@ -23,23 +23,27 @@
     <script>
 
         // 아이디속성으로 요소 노드 가져오기
-        // console.log(document.body);
+        //  console.log(document.body);
+        //  document.body.style.background = 'black';
+
 
         const $bnn = document.getElementById('banana');
-        console.log($bnn.textContent);
+        console.log($bnn.ownerDocument);
+        // console.log($bnn.textContent);
 
         $bnn.textContent = '브네이너';
+        
 
-        console.log($bnn.style);
-        $bnn.style.color = 'yellow';
-        $bnn.style.fontSize = '20px';
-        $bnn.style.fontWeight = 'bold';
+        // console.log($bnn.style);
+        // $bnn.style.color = 'yellow';
+        // $bnn.style.fontSize = '20px';
+        // $bnn.style.fontWeight = 'bold';
 
-        //id가 grape인 요소노드를 취득하여
-        //배경색상을 violet으로 변경
-        const $grape = document.getElementById('grape');
-        $grape.style.backgroundColor = 'violet';
-        $grape.style.width = 'fit-content';
+        // //id가 grape인 요소노드를 취득하여
+        // //배경색상을 violet으로 변경
+        // const $grape = document.getElementById('grape');
+        // $grape.style.backgroundColor = 'violet';
+        // $grape.style.width = 'fit-content';
         
         
     </script>

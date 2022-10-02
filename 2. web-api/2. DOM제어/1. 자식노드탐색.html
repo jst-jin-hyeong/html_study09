@@ -16,36 +16,36 @@
     </ul>
 
     <div class="ttt">
-        <p></p>
+        <!-- <p></p> -->
     </div>
 
     <script>
 
-        //노드탐색의 기점이 되는 요소 취득
-        // const $fruits = document.getElementById('fruits');
+        // //노드탐색의 기점이 되는 요소 취득
+        // // const $fruits = document.getElementById('fruits');
         const $fruits = document.querySelector('#fruits');
-        // console.log($fruits);
+        console.log($fruits);
 
-        //기준 노드의 모든 자식노드를 탐색, 텍스트노드 포함
-        // const $childs = $fruits.childNodes;
+        // //기준 노드의 모든 자식노드를 탐색, 텍스트노드 포함
+        // // const $childs = $fruits.childNodes;
 
-        //기준 노드의 모든 자식노드를 탐색, 텍스트노드 제외
+        // //기준 노드의 모든 자식노드를 탐색, 텍스트노드 제외
         const $childs = $fruits.children;
 
         console.log($childs);
 
-        // const $first = $childs[0];
-        // const $last = $childs[$childs.length - 1];
+        // // const $first = $childs[0];
+        // // const $last = $childs[$childs.length - 1];
 
-        const $first = $fruits.firstElementChild;
-        const $last = $fruits.lastElementChild;
-        console.log($first);
-        console.log($last);
+        // const $first = $fruits.firstElementChild;
+        // const $last = $fruits.lastElementChild;
+        // console.log($first);
+        // console.log($last);
 
-        console.log('=======================');
+        // console.log('=======================');
 
         const $div = document.querySelector('.ttt');
-        // console.log($div.hasChildNodes());
+        console.log($div.hasChildNodes());
         console.log(!!$div.children.length);
 
 

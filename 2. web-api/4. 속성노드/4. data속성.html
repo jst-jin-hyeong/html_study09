@@ -24,9 +24,19 @@
 
         $u2.dataset.role = 'common';
 
+        //프로퍼티 추가하기
         $u1.dataset.userAddress = '대전시 서구';
 
-        delete $u1.dataset.userAddress;
+        //프로퍼티 삭제하기
+        // delete $u1.dataset.userAddress;
+        //Or
+        $u1.removeAttribute('data-user-address');
+
+        //커스터마이징 - 리팩토링으로 편하게 만들기
+        function removeDataAttr($elementNode, dataName){
+            $elementNode.removeAttribute('data-' +dataName);
+        }
+        removeDataAttr($u1, 'role');
 
     </script>
 

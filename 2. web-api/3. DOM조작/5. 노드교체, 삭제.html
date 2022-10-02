@@ -15,14 +15,15 @@
 
     <script>
         const $fruits = document.querySelector('#fruits');
-        const $mango = $fruits.firstElementChild.cloneNode();
+        // const $mango = $fruits.firstElementChild.cloneNode();
+        const $mango = document.createElement('li');
         $mango.textContent = '망고'; // <li>망고</li>
 
         //노드 교체 (new, old)
         $fruits.replaceChild($mango, $fruits.firstElementChild);
 
         //노드 삭제
-        $fruits.removeChild($fruits.lastElementChild);
+        // $fruits.removeChild($fruits.lastElementChild);
 
     </script>
 

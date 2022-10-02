@@ -23,11 +23,15 @@
             //2. 생성된 노드에 텍스트 추가
             // <li>바나나</li>
             $newLi.textContent = text;
+            //여기까지는 가상의 돔 - 어딘가에 추가되어있지도 연결되어 있지도 않음
+
 
             //3. 새로운 노드를 ul의 자식으로 추가
             const $ul = document.getElementById('fruits');
             $ul.appendChild($newLi);
         }
+
+        appendNewLi('바나나');  
 
         const fArr = ['바나나', '포도', '딸기', '복숭아', '참외', '수박'];
 

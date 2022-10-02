@@ -56,9 +56,13 @@
         const activate = e => {
 
             //이벤트 발생 타겟을 제한
+            //mathes(css selector)
+            // - 이벤트타겟이 선택자와 일치하면 true 아니면 false
             if (!e.target.matches('#fruits > li')) {
+                console.log('꺼졌지롱');
                 return;
             }
+            console.log('안꺼졌지롱');
 
             
 

@@ -39,6 +39,9 @@
         const $children = document.getElementsByClassName('red');
 
         console.log($children);
+        for (let i = 0; i < $children.length; i++){
+            $children[i].className = 'blue';
+        }
 
         /*
             HTMLCollection 유사배열은 실시간으로 변동하는 Live Dom입니다.
