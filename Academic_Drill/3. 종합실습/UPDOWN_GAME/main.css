@@ -6,22 +6,31 @@ a {
 }
 
 /* layout */
+/*+ wrapper 클래스 */
 .wrapper {
     font-size: 18px;
     background: #8c8c8c;
+/*+ 100vh는 디바이스의 세로 100%를 의미하는 것 */
+/*? 가로도 100퍼인 것 같은데? */
     height: 100vh;
+/*? position relatvie 찾아보자 */
     position: relative;
 }
 
+
+/*+ section태그의 main 클래스  */
 section.main {
     width: 40%;
     background: #f6f6f6;
 
+/*? absolute하고 left50% top50%가 중앙이었던가  */
     position: absolute;
     left: 50%;
     top: 50%;
+/*?transform 뭐할 때 쓰는 거더라  */
     transform: translate(-50%, -50%);
 
+/*+ border-radius는 마음대로 조절 가능 */
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 1px 1px 5px rgba(0,0,0, 0.7);
