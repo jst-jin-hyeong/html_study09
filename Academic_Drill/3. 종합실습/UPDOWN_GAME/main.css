@@ -32,6 +32,7 @@ section.main {
 
 /*+ border-radius는 마음대로 조절 가능 */
     border-radius: 10px;
+/*? 숫자써클이 아래로 내려가면 보이지 않게 하는 것인 줄 알았는데 주석처리해도 다르지 않네 */
     overflow: hidden;
     box-shadow: 1px 1px 5px rgba(0,0,0, 0.7);
 }
@@ -59,30 +60,37 @@ section.main .number-wrapper h2 em {
     color: #f00;
 }
 
+
 #numbers {
     width: 70%;
     height: 400px;
+/*+ 여기가 숫자원들 아래로 넘어가면 자동으로 스크롤로 바뀌게 하는 거였구나  */
     overflow: auto;
     border: 1px solid #000;
     border-radius: 10px;
     margin: 30px auto 0;
     padding: 30px 0 30px 50px;
-
+/*+ css flex를 쓰겠다! */
     display: flex;
+/* flex-wrap을  사용하겠다.*/
     flex-wrap: wrap;
 }
+
 #numbers .icon {
     width: 90px;
     height: 90px;
+/*+ border-radius를 50%를 주면 원이 된다는 것! */
     border-radius: 50%;
     font-size: 32px;
     font-weight: 700;
     color: #fff;
     background: #000;
     display: flex;
+/*+ justify-content는 가로*/
     justify-content: center;
+/*+ align-items는 세로 */
     align-items: center;
-    margin-right: 5%;
+    margin-right: 50%;
     margin-bottom: 10px;
     cursor: pointer;
 }
@@ -131,6 +139,8 @@ section.main .number-wrapper h2 em {
 .result div.selected {
     animation: jumping 0.3s infinite linear alternate;
 }
+
+/*+ 아래는 애니메이션에 관련한 내용 */
 @keyframes jumping {
     0% {
         transform: translateY(0);
@@ -161,6 +171,7 @@ section.main .number-wrapper h2 em {
     z-index: -100;
 }
 
+/*+ 아래는 애니메이션에 관련된 내용  */
 #finish.show {
     animation: showUp 1s linear forwards;
 }

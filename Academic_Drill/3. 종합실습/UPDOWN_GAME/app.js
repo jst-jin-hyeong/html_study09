@@ -17,8 +17,7 @@ function makeIcons() {
 
     for (let n = 1; n <= 100; n++) {
         const $div = document.createElement('div');
-        $div.classList.add('icon');
-        $div.textContent = n;
+        $div.classList.add('icon');b
         $numbers.appendChild($div);
     }
 
