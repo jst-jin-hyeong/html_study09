@@ -1,5 +1,18 @@
 
 /* reset */
+div>span{
+    font-size: 13px;
+}
+div.pick{
+    margin-left: 30%;
+    margin-right: 30%;
+    border-radius: 6px;
+    padding: 10px;
+    position: relative;
+    top: 9%;
+    background: white;
+    box-shadow: 1px 1px 5px rgba(0,0,0, 0.7);
+}
 a {
     color: inherit;
     text-decoration: none;
@@ -90,7 +103,7 @@ section.main .number-wrapper h2 em {
     justify-content: center;
 /*+ align-items는 세로 */
     align-items: center;
-    margin-right: 50%;
+    margin-right: 5%;
     margin-bottom: 10px;
     cursor: pointer;
 }

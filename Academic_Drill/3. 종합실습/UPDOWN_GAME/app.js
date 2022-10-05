@@ -11,13 +11,14 @@ const gameDatas = {
 
 
 //숫자 아이콘 생성 함수
+//+ 여러개 생성하고 자식으로 추가할 때 늘 사용될 수 있는 방법일 듯 하다.
 function makeIcons() {
-
     const $numbers = document.getElementById('numbers');
 
     for (let n = 1; n <= 100; n++) {
         const $div = document.createElement('div');
-        $div.classList.add('icon');b
+        $div.classList.add('icon');
+        $div.textContent = n;
         $numbers.appendChild($div);
     }
 
