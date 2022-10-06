@@ -44,3 +44,14 @@ var result = isEven(3);
 
 console.log(`result: ${result}`);
 
+
+
+function max(...numbers) {
+    var maxNum=0;
+    for(var pick of numbers){
+      maxNum<pick ? maxNum=pick : pick=pick;
+  }
+  return maxNum;
+}
+  const result = max(1, 2, 3, 4, 10, 5, 6, 7);
+  console.log(result);

@@ -28,6 +28,7 @@ introMyPet({
 
 // ES6+ 문법
 function addAll2(...numbersss) {
+    console.log(numbersss);
     console.log(typeof(numbersss));
     var total = 0;
     for (var n of numbersss) {
@@ -36,6 +37,7 @@ function addAll2(...numbersss) {
     return total;
 }
 addAll2(1, 3, 4, 65, 7);
+console.log(addAll2(1, 3, 4, 65, 7));
 
 var result1 = add2(10, 20);
 var result2 = add3(10, 20, 30);
