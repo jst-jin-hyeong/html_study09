@@ -1,0 +1,226 @@
+
+/* reset */
+div>span{
+    font-size: 13px;
+}
+div.pick{
+    margin-left: 30%;
+    margin-right: 30%;
+    border-radius: 6px;
+    padding: 10px;
+    position: relative;
+    top: 9%;
+    background: white;
+    box-shadow: 1px 1px 5px rgba(0,0,0, 0.7);
+}
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* layout */
+/*+ wrapper 클래스 */
+.wrapper {
+    font-size: 18px;
+    background: #8c8c8c;
+/*+ 100vh는 디바이스의 세로 100%를 의미하는 것 */
+/*? 가로도 100퍼인 것 같은데? */
+    height: 100vh;
+/*? position relatvie 찾아보자 */
+    position: relative;
+}
+
+
+/*+ section태그의 main 클래스  */
+section.main {
+    width: 40%;
+    background: #f6f6f6;
+
+/*? absolute하고 left50% top50%가 중앙이었던가  */
+    position: absolute;
+    left: 50%;
+    top: 50%;
+/*?transform 뭐할 때 쓰는 거더라  */
+    transform: translate(-50%, -50%);
+
+/*+ border-radius는 마음대로 조절 가능 */
+    border-radius: 10px;
+/*? 숫자써클이 아래로 내려가면 보이지 않게 하는 것인 줄 알았는데 주석처리해도 다르지 않네 */
+    overflow: hidden;
+    box-shadow: 1px 1px 5px rgba(0,0,0, 0.7);
+}
+
+section.main .main-title {
+    font-size: 30px;
+    font-weight: 700;
+    background: #a3f8ff;
+    text-align: center;
+    padding: 30px 20px;
+    border-bottom: 1px solid #d3d3d3;
+}
+section.main .number-wrapper {
+    padding: 50px 20px;
+}
+section.main .number-wrapper h2 {
+    font-size: 22px;
+    text-align: center;
+    text-decoration: underline;
+}
+
+section.main .number-wrapper h2 em {
+    font-size: 1.2em;
+    font-weight: 700;
+    color: #f00;
+}
+
+
+#numbers {
+    width: 70%;
+    height: 400px;
+/*+ 여기가 숫자원들 아래로 넘어가면 자동으로 스크롤로 바뀌게 하는 거였구나  */
+    overflow: auto;
+    border: 1px solid #000;
+    border-radius: 10px;
+    margin: 30px auto 0;
+    padding: 30px 0 30px 50px;
+/*+ css flex를 쓰겠다! */
+    display: flex;
+/* flex-wrap을  사용하겠다.*/
+    flex-wrap: wrap;
+}
+
+#numbers .icon {
+    width: 90px;
+    height: 90px;
+/*+ border-radius를 50%를 주면 원이 된다는 것! */
+    border-radius: 50%;
+    font-size: 32px;
+    font-weight: 700;
+    color: #fff;
+    background: #000;
+    display: flex;
+/*+ justify-content는 가로*/
+    justify-content: center;
+/*+ align-items는 세로 */
+    align-items: center;
+    margin-right: 5%;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+#numbers .icon:hover{
+    transform: scale(1.1);
+    opacity: 0.7;
+}
+#numbers .icon:nth-child(4n) {
+    background: orangered;
+}
+#numbers .icon:nth-child(4n - 1) {
+    background: yellowgreen;
+}
+#numbers .icon:nth-child(4n - 2) {
+    background: skyblue;
+}
+#numbers .icon:nth-child(4n - 3) {
+    background: orange;
+}
+
+.result {
+    position: absolute;
+    right: 20%;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+.result div {
+    width: 150px;
+    height: 150px;  
+    border-radius: 50%;
+    font-size: 30px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#up {
+    background: red;
+}
+#down {
+    background: blue;
+}
+
+.result div.selected {
+    animation: jumping 0.3s infinite linear alternate;
+}
+
+/*+ 아래는 애니메이션에 관련한 내용 */
+@keyframes jumping {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(-20px);
+    }
+}
+
+#finish {
+    width: 60%;
+    height: 200px;
+    background: tomato;
+    font-size: 80px;
+    font-weight: 700;
+    border: 2px solid #000;
+    border-radius: 20px;
+    text-align: center;
+    line-height: 200px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    z-index: -100;
+}
+
+/*+ 아래는 애니메이션에 관련된 내용  */
+#finish.show {
+    animation: showUp 1s linear forwards;
+}
+@keyframes showUp {
+    0% {
+        opacity: 0;
+        top: -50%;
+    }
+    50% {
+        opacity: 0.5;
+        top: 0;
+    }
+    100% {
+        opacity: 1;
+        top: 50%;
+        z-index: 100;
+    }
+}
+
+/* 정답아이콘에 id="move"가 붙으면 아이콘이 커지면서
+움직이는 애니메이션 */
+.icon#move {
+    position: absolute;
+    left: 50%;
+    top: 10%;
+    z-index: 10;
+    border: 4px dashed #000;
+    animation: move 1s linear forwards;
+}
+@keyframes move {
+    0% {
+        top: 0;
+        transform: translateX(0) rotate(0) scale(1);
+    }
+    100% {
+        top: 10%;
+        transform: translateX(-50%) rotate(720deg) scale(2);
+    }
+}
